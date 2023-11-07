@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Flappy Corgi</title>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta name="keywords" content="flappybird,flappy,bird,dragon,flappydragon,html,html5,css,css3,js,javascript,jquery,gameofthrones,thrones,game,briefkani,open,source,opensource,wikiofthrones" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+      <!-- Open Graph tags -->
+      
+      <!-- Style sheets -->
+      <link href="css/reset.css" rel="stylesheet">
+      <link href="css/main.css" rel="stylesheet">
+   </head>
+   <body>
+	<audio id="my_audio" src="assets/sounds/bg_music.ogg" loop="loop"></audio>
+      <div id="gamecontainer">
+         <div id="gamescreen">
+			<div id = "stars" class = "animated"></div>
+            <div id="sky" class="animated">
+               <div id="flyarea">
+                  <div id="ceiling" class="animated"></div>
+                  <!-- This is the flying and pipe area container -->
+                  <div id="player" class="bird animated"></div>
+
+                  <div id="bigscore"></div>
+
+                  <div id="splash"></div>
+
+                  <div id="scoreboard">
+                     <div id="medal"></div>
+                     <div id="currentscore"></div>
+                     <div id="highscore"></div>
+                     <!--<div id="replay"><img src="assets/replay.png" alt="replay"></div>-->
+                     <div id="twitter-share-btn" onclick="shareBtnClick(this.id)"><img src="assets/twitter_share_btn.png" alt="replay"></div>
+                     <div id="tg-share-btn" onclick="shareBtnClick(this.id)"><img src="assets/tg_share_btn.png" alt="replay"></div>
+					 <div id="web-share-btn" onclick="shareBtnClick(this.id)"><img src="assets/web_share_btn.png" alt="replay"></div>
+                     <div id="replay"><img src="assets/fd_replay.png" alt="replay"></div>
+   
+                  </div>
+
+                  <!-- Pipes go here! -->
+               </div>
+            </div>
+            <div id="land" class="animated"><div id="debug"></div></div>
+         </div>
+      </div>
+      <div class="boundingbox" id="playerbox"></div>
+      <div class="boundingbox" id="pipebox"></div>
+
+      <script src="js/jquery.min.js"></script>
+      <script src="js/jquery.transit.min.js"></script>
+      <script src="js/buzz.min.js"></script>
+      <script src="js/html2canvas.min.js"></script>
+      <script src="js/main.js"></script>
+
+      <script>
+      function inIframe() {
+          try {
+              return window.self !== window.top;
+          } catch (e) {
+              return true;
+          }
+      }
+      if (!inIframe() && window.location.hostname == 'nebezb.com') {
+         window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+         ga('create', 'UA-48047334-1', 'auto');
+         ga('send', 'pageview');
+      }
+      </script>
+      <script async src='https://www.google-analytics.com/analytics.js'></script>
+   </body>
+</html>
